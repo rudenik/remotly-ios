@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F03A6A7218DE981003A349A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F03A6A6218DE981003A349A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3F03A6A9218DEA25003A349A /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3F03A6A6218DE981003A349A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F03A6AA218DEA52003A349A /* BRYXBanner.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3E8DFEF1B8E32FC0002429D /* BRYXBanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D30B77621B8D06A800A23067 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B77601B8D06A800A23067 /* Server.swift */; };
 		D30B77631B8D06A800A23067 /* Torrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B77611B8D06A800A23067 /* Torrent.swift */; };
 		D30B77651B8D0A6700A23067 /* TorrentExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B77641B8D0A6700A23067 /* TorrentExtensions.swift */; };
@@ -33,7 +36,7 @@
 		D3DA61251B8C99A0006B8762 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA61241B8C99A0006B8762 /* Configuration.swift */; };
 		D3DA61271B8CA1C4006B8762 /* FormatHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA61261B8CA1C4006B8762 /* FormatHandler.swift */; };
 		D3E8DFEC1B8DDB9F0002429D /* MagnetLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8DFEB1B8DDB9F0002429D /* MagnetLinkHandler.swift */; };
-		D3E8DFF01B8E32FC0002429D /* BRYXBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E8DFEF1B8E32FC0002429D /* BRYXBanner.framework */; };
+		D3E8DFF01B8E32FC0002429D /* BRYXBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E8DFEF1B8E32FC0002429D /* BRYXBanner.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D3E8DFF21B8E40C60002429D /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8DFF11B8E40C60002429D /* NotificationHandler.swift */; };
 		D3FDEC7D1B67F64E00ADC986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FDEC7C1B67F64E00ADC986 /* AppDelegate.swift */; };
 		D3FDEC801B67F64E00ADC986 /* Remotly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FDEC7E1B67F64E00ADC986 /* Remotly.xcdatamodeld */; };
@@ -43,7 +46,6 @@
 		D3FDEC961B67F64E00ADC986 /* RemotlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FDEC951B67F64E00ADC986 /* RemotlyTests.swift */; };
 		F43263301FB7CF4F00EDE4A7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432632F1FB7CF4F00EDE4A7 /* File.swift */; };
 		F43263321FB8CAD700EDE4A7 /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43263311FB8CAD700EDE4A7 /* FileInfo.swift */; };
-		F4B8EB2E2025F5B20038B49E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B8EB212025F5A80038B49E /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,8 +114,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3F03A6A8218DEA0F003A349A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3F03A6AA218DEA52003A349A /* BRYXBanner.framework in CopyFiles */,
+				3F03A6A9218DEA25003A349A /* SwiftyJSON.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		02BB158BC7A7EA36D730CFF1 /* libPods-Remotly.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Remotly.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F03A6A6218DE981003A349A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		D30B77601B8D06A800A23067 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		D30B77611B8D06A800A23067 /* Torrent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Torrent.swift; sourceTree = "<group>"; };
 		D30B77641B8D0A6700A23067 /* TorrentExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorrentExtensions.swift; sourceTree = "<group>"; };
@@ -128,7 +145,6 @@
 		D35D05FE1B6A9C0000E4C72B /* TransmissionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransmissionClient.swift; sourceTree = "<group>"; };
 		D35D06001B6A9C3400E4C72B /* TorrentInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorrentInformation.swift; sourceTree = "<group>"; };
 		D35D06021B6BF9CB00E4C72B /* TorrentsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorrentsCell.swift; sourceTree = "<group>"; };
-		D35D06061B6D35D200E4C72B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		D37D29201B9047FE0061B496 /* PreferencesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesController.swift; sourceTree = "<group>"; };
 		D39A44331B8F08D10010C095 /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		D39A44351B8F14190010C095 /* ThirdPartyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPartyController.swift; sourceTree = "<group>"; };
@@ -257,8 +273,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4B8EB2E2025F5B20038B49E /* SwiftyJSON.framework in Frameworks */,
 				D3E8DFF01B8E32FC0002429D /* BRYXBanner.framework in Frameworks */,
+				3F03A6A7218DE981003A349A /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,8 +372,8 @@
 			isa = PBXGroup;
 			children = (
 				D32BF18A1B8B042D0027AC01 /* README.md */,
+				3F03A6A6218DE981003A349A /* SwiftyJSON.framework */,
 				D3E8DFEF1B8E32FC0002429D /* BRYXBanner.framework */,
-				D35D06061B6D35D200E4C72B /* SwiftyJSON.framework */,
 				D3FDEC791B67F64E00ADC986 /* Remotly */,
 				D3FDEC921B67F64E00ADC986 /* RemotlyTests */,
 				D3FDEC781B67F64E00ADC986 /* Products */,
@@ -657,6 +673,7 @@
 				D3FDEC741B67F64E00ADC986 /* Frameworks */,
 				D3FDEC751B67F64E00ADC986 /* Resources */,
 				D35D06081B6D365300E4C72B /* Run Script */,
+				3F03A6A8218DEA0F003A349A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -692,7 +709,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = "SunLine Technologies";
+				ORGANIZATIONNAME = Sector7;
 				TargetAttributes = {
 					D3FDEC761B67F64E00ADC986 = {
 						CreatedOnToolsVersion = 6.4;
@@ -707,7 +724,7 @@
 				};
 			};
 			buildConfigurationList = D3FDEC721B67F64E00ADC986 /* Build configuration list for PBXProject "Remotly" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -818,7 +835,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		D35D06081B6D365300E4C72B /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -828,9 +845,9 @@
 			name = "Run Script";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -951,7 +968,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Simon Cain (9Q2QG695YD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Simon Cain (9Q2QG695YD)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1005,7 +1023,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Simon Cain (9Q2QG695YD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Simon Cain (9Q2QG695YD)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1022,7 +1041,8 @@
 				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1039,7 +1059,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Remotly/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.sector7.Remotly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -1060,7 +1083,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Remotly/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.sector7.Remotly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -1082,7 +1108,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = RemotlyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.sltch.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -1100,7 +1130,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = RemotlyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.sltch.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
