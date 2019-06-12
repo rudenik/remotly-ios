@@ -447,7 +447,7 @@ class TransmissionClient
       
       if(error != nil)
       {
-        print("error: \(String(describing: error))")
+        print("send error : \(String(describing: error))")
         completionHandler?(data, response, error as NSError?)
       }
       else

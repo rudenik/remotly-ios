@@ -256,6 +256,8 @@ class TorrentsListController: UITableViewController, UIAlertViewDelegate, UIActi
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType)
     {
+      print("newIndexPath 259:  \(sectionIndex)")
+//            print("newIndexPath:  \(sectionIndex)")
         DispatchQueue.main.async {
             switch(type) {
                 case NSFetchedResultsChangeType.insert:
@@ -272,9 +274,44 @@ class TorrentsListController: UITableViewController, UIAlertViewDelegate, UIActi
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?)
     {
+//      print("newIndexPath 277:  \(indexPath)")
         DispatchQueue.main.async {
-            var tableView = self.tableView
+//            var tableView = self.tableView
+          switch type {
+          case NSFetchedResultsChangeType.insert:
+            if let insertIndexPath = newIndexPath {
+              self.tableView.insertRows(at: [insertIndexPath], with: UITableViewRowAnimation.fade)
+            }
+          case NSFetchedResultsChangeType.delete:
+            if let deleteIndexPath = indexPath {
+              self.tableView.deleteRows(at: [deleteIndexPath], with: UITableViewRowAnimation.fade)
+            }
+          case NSFetchedResultsChangeType.update:
+            print("Change Type update: ")
+            if let updateIndexPath = indexPath {
+              let cell = self.tableView.cellForRow(at: updateIndexPath) as? TorrentsCell
+              if(cell != nil)
+              {
+                let torrent = self.fetchedResultsController.object(at: indexPath!) as! Torrent
+                cell!.setTorrent(torrent)
+              }else{
+                print("nil cell");
+              }
+              print("updateIndex: First,\(updateIndexPath[0]) , last \(updateIndexPath[1]) ")
+            }
+          case NSFetchedResultsChangeType.move:
+            print("Change Type move: ")
+            if let deleteIndexPath = indexPath {
+              self.tableView.deleteRows(at: [deleteIndexPath], with: UITableViewRowAnimation.fade)
+              print("deleteIndex: \(deleteIndexPath)")
+            }
+            if let insertIndexPath = newIndexPath {
+              self.tableView.insertRows(at: [insertIndexPath], with: UITableViewRowAnimation.fade)
+              print("insertIndexPath: \(insertIndexPath)")
+            }
             
+          }
+          /*
             switch(type)
             {
                 case NSFetchedResultsChangeType.insert:
@@ -286,11 +323,12 @@ class TorrentsListController: UITableViewController, UIAlertViewDelegate, UIActi
                     break;
 
                 case NSFetchedResultsChangeType.delete:
+                  print("Deleting stuff, newIndex: \(newIndexPath), index: \(indexPath)")
                   tableView?.deleteRows(at: (NSArray(object: indexPath) as! [IndexPath]), with: UITableViewRowAnimation.fade)
                     break;
 
                 case NSFetchedResultsChangeType.update:
-
+                  print("Updating stuff newIndex: \(newIndexPath), index: \(indexPath)")
                     var cell = tableView?.cellForRow(at: indexPath!) as? TorrentsCell
                     
                     if(cell != nil)
@@ -301,10 +339,11 @@ class TorrentsListController: UITableViewController, UIAlertViewDelegate, UIActi
                     break;
 
                 case NSFetchedResultsChangeType.move:
+                  print("Updating stuff newIndex: \(newIndexPath), index: \(indexPath)")
                     tableView?.deleteRows(at: (NSArray(object: indexPath) as! [IndexPath]), with: UITableViewRowAnimation.fade)
                     tableView?.insertRows(at: (NSArray(object: newIndexPath) as! [IndexPath]), with: UITableViewRowAnimation.fade)
                     break;
-            }
+            }*/
         }
     }
     

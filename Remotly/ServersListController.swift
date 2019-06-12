@@ -57,7 +57,10 @@ class ServersListController: UITableViewController, NSFetchedResultsControllerDe
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>)
     {
         configuration = CoreDataHandler.getConfiguration(context)
+      DispatchQueue.main.async { // Correct
         self.tableView.reloadData()
+      }
+      
     }
 
     // MARK: - Table view data source

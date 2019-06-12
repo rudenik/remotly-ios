@@ -5,10 +5,10 @@
 	<key>ArchiveVersion</key>
 	<integer>2</integer>
 	<key>CreationDate</key>
-	<date>2018-09-26T15:03:51Z</date>
+	<date>2019-03-28T19:04:05Z</date>
 	<key>Name</key>
-	<string>SwiftyJSON watchOS</string>
+	<string>SwiftyJSON iOS</string>
 	<key>SchemeName</key>
-	<string>SwiftyJSON watchOS</string>
+	<string>SwiftyJSON iOS</string>
 </dict>
 </plist>
