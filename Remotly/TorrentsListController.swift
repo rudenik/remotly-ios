@@ -196,6 +196,7 @@ class TorrentsListController: UITableViewController, UIAlertViewDelegate, UIActi
     {
         let toolbarFontAttributes = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 13.0)]
         downloadToolbarOutlet.setTitleTextAttributes(toolbarFontAttributes, for: UIControlState())
+        
         uploadToolbarOutlet.setTitleTextAttributes(toolbarFontAttributes, for: UIControlState())
     }
     

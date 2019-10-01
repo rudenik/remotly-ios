@@ -18,6 +18,7 @@ class TorrentsCell: UITableViewCell
     @IBOutlet weak var progressOutlet: UIProgressView!
     @IBOutlet weak var imageStatusOutlet: UIImageView!
     
+    
     func setTorrent(_ torrent:Torrent)
     {
         nameOutlet.text = torrent.name
@@ -29,7 +30,12 @@ class TorrentsCell: UITableViewCell
         
         if(torrent.isDownloading)
         {
-            nameOutlet.textColor = UIColor.black
+            if #available(iOS 13.0, *) {
+                nameOutlet.textColor = UIColor.label
+            } else {
+                // Fallback on earlier versions
+                nameOutlet.textColor = UIColor.darkText
+            }
             imageStatusOutlet.image = UIImage(named: "play1")
         }
         else if (torrent.isPaused)
